@@ -1,0 +1,292 @@
+/* ==========================================
+   PART 3 - PREMIUM EFFECTS
+========================================== */
+
+/* Floating Animation */
+
+.hero-left{
+
+    animation:slideLeft 1s ease;
+}
+
+.hero-right{
+
+    animation:slideRight 1s ease;
+}
+
+@keyframes slideLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-70px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes slideRight{
+
+    from{
+        opacity:0;
+        transform:translateX(70px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+/* Glow Effect */
+
+.hero h1{
+
+    text-shadow:
+    0 0 10px rgba(110,231,255,.25),
+    0 0 20px rgba(91,95,255,.15);
+
+}
+
+.feature-box:hover i{
+
+    transform:rotate(10deg) scale(1.15);
+
+    transition:.4s;
+
+}
+
+/* Card Glow */
+
+.card:hover{
+
+    box-shadow:
+    0 0 20px rgba(91,95,255,.35);
+
+}
+
+/* Buttons */
+
+.primary-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.primary-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:100%;
+
+    left:0;
+
+    top:0;
+
+    background:rgba(255,255,255,.15);
+
+    transition:.4s;
+
+}
+
+.primary-btn:hover::before{
+
+    width:100%;
+
+}
+
+/* Navbar Links */
+
+nav ul li{
+
+    position:relative;
+
+}
+
+nav ul li::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#6ee7ff;
+
+    transition:.4s;
+
+}
+
+nav ul li:hover::after{
+
+    width:100%;
+
+}
+
+/* Hero Image Floating */
+
+.glass-card{
+
+    animation:
+    float 5s ease-in-out infinite,
+    glow 3s infinite alternate;
+
+}
+
+@keyframes glow{
+
+    from{
+
+        box-shadow:
+        0 0 15px rgba(91,95,255,.25);
+
+    }
+
+    to{
+
+        box-shadow:
+        0 0 35px rgba(110,231,255,.45);
+
+    }
+
+}
+
+/* Smooth Card Hover */
+
+.feature-box,
+.card,
+.login-btn,
+.primary-btn,
+.secondary-btn{
+
+    transition:all .35s ease;
+
+}
+
+/* Fade Up Animation */
+
+.feature-box{
+
+    animation:fadeUp .9s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Selection Color */
+
+::selection{
+
+    background:#6ee7ff;
+
+    color:#111827;
+
+}
+
+/* Hero Span Gradient */
+
+.hero h1 span{
+
+    background:linear-gradient(
+    90deg,
+    #6ee7ff,
+    #8b5cf6);
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+/* Footer */
+
+footer{
+
+    backdrop-filter:blur(12px);
+
+}
+
+/* Little Floating Dots */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:#6ee7ff;
+
+    left:10%;
+
+    top:20%;
+
+    box-shadow:
+    250px 150px #5b5fff,
+    600px 100px #6ee7ff,
+    900px 350px #5b5fff,
+    400px 500px #6ee7ff,
+    1200px 220px #5b5fff;
+
+    opacity:.35;
+
+    animation:particles 15s linear infinite;
+
+    z-index:-1;
+
+}
+
+@keyframes particles{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-80px);
+
+    }
+
+}
