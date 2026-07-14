@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload Dataset | DataDrishti AI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/uploadpg.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        <i class="fa-solid fa-chart-line"></i>
+        DataDrishti AI
+    </div>
+
+    <ul>
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="#">Dashboard</a></li>
+
+        <li><a href="#">Reports</a></li>
+
+    </ul>
+
+</nav>
+
+<section class="upload-page">
+
+    <h1>Upload Your Dataset</h1>
+
+    <p>
+        Upload your CSV or Excel file and let AI analyze your business data.
+    </p>
+
+    <div class="upload-box">
+
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+
+        <h2>Drag & Drop File Here</h2>
+
+        <p>or</p>
+
+        <input type="file" id="fileInput" hidden>
+
+        <button onclick="document.getElementById('fileInput').click()">
+
+            Browse Dataset
+
+        </button>
+
+        <span id="fileName">No file selected</span>
+
+    </div>
+
+    <button class="analyze-btn" onclick="startAnalysis()">
+
+        Analyze Dataset
+
+    </button>
+
+</section>
+
+<div class="loader" id="loader">
+
+    <div class="spinner"></div>
+
+    <h2>Analyzing Dataset...</h2>
+
+    <p>Please wait while AI is generating insights.</p>
+
+</div>
+
+<script>
+
+const fileInput=document.getElementById("fileInput");
+
+const fileName=document.getElementById("fileName");
+
+fileInput.addEventListener("change",()=>{
+
+if(fileInput.files.length>0){
+
+fileName.innerHTML=fileInput.files[0].name;
+
+}
+
+});
+
+function startAnalysis(){
+
+if(fileInput.files.length==0){
+
+alert("Please select a dataset.");
+
+return;
+
+}
+
+document.getElementById("loader").style.display="flex";
+
+setTimeout(()=>{
+
+window.location.href="dashboard.html";
+
+},3000);
+
+}
+
+</script>
+
+</body>
+</html>
