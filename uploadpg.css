@@ -1,5 +1,13 @@
 /* Upload Page */
+body{
 
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+
+color:white;
+
+font-family:Poppins,sans-serif;
+
+}
 .upload-page{
 
 min-height:85vh;
