@@ -1,0 +1,127 @@
+/* ==========================
+   Report Page CSS Part 2
+========================== */
+
+/* Charts */
+
+.report-charts{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+    margin-top:35px;
+}
+
+.chart-card{
+    background:rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:25px;
+    transition:.3s;
+}
+
+.chart-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 25px rgba(0,0,0,.35);
+}
+
+.chart-card h2{
+    margin-bottom:20px;
+    color:#38bdf8;
+}
+
+.chart-card canvas{
+    width:100% !important;
+    height:300px !important;
+}
+
+/* ==========================
+      Performance Table
+========================== */
+
+.performance{
+    margin-top:35px;
+    background:rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:18px;
+}
+
+.performance h2{
+    margin-bottom:20px;
+    color:#38bdf8;
+}
+
+.performance table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.performance th{
+    text-align:left;
+    padding:15px;
+    background:#1e3a8a;
+    color:white;
+}
+
+.performance td{
+    padding:15px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    color:#d1d5db;
+}
+
+.performance tr:hover{
+    background:rgba(255,255,255,.05);
+}
+
+/* ==========================
+      Top Products
+========================== */
+
+.top-products-report{
+    margin-top:35px;
+    background:rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:25px;
+}
+
+.top-products-report h2{
+    margin-bottom:25px;
+    color:#38bdf8;
+}
+
+.product-item{
+    display:flex;
+    justify-content:space-between;
+    margin-top:18px;
+    font-size:16px;
+}
+
+.progress{
+    width:100%;
+    height:12px;
+    background:#1f2937;
+    border-radius:30px;
+    overflow:hidden;
+    margin:10px 0 25px;
+}
+
+.fill{
+    height:100%;
+    background:linear-gradient(90deg,#2563eb,#38bdf8);
+    border-radius:30px;
+}
+
+/* ==========================
+      Hover Animation
+========================== */
+
+.performance,
+.top-products-report,
+.chart-card{
+    transition:.3s;
+}
+
+.performance:hover,
+.top-products-report:hover,
+.chart-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+}

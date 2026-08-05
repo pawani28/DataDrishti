@@ -1,0 +1,330 @@
+/* ==========================
+   Dashboard CSS - Part 3
+========================== */
+
+/* Hover Effects */
+
+.card,
+.chart-box,
+.ai-box,
+.recent-activity,
+.top-products,
+.chat-preview{
+
+    transition:0.35s ease;
+
+}
+
+.card:hover,
+.chart-box:hover,
+.ai-box:hover,
+.recent-activity:hover,
+.top-products:hover,
+.chat-preview:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+/* Sidebar Hover */
+
+.sidebar ul li{
+
+    transition:0.3s;
+
+}
+
+.sidebar ul li:hover{
+
+    background:#3b82f6;
+
+    transform:translateX(8px);
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#3b82f6;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#6ee7ff;
+
+}
+
+/* Fade Animation */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.welcome,
+.cards,
+.bottom,
+.extra-section,
+.chat-preview{
+
+    animation:fadeUp .8s ease;
+
+}
+
+/* Button Effects */
+
+.ai-box button,
+.chat-btn{
+
+    transition:.3s;
+
+}
+
+.ai-box button:hover,
+.chat-btn:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 20px rgba(110,231,255,.4);
+
+}
+
+/* KPI Card Number */
+
+.card h1{
+
+    transition:.3s;
+
+}
+
+.card:hover h1{
+
+    color:#60a5fa;
+
+}
+
+/* Welcome Box */
+
+.welcome{
+
+    border-left:5px solid #6ee7ff;
+
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.bottom{
+
+grid-template-columns:1fr;
+
+}
+
+.extra-section{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.sidebar{
+
+width:80px;
+
+padding:20px 10px;
+
+}
+
+.sidebar h2{
+
+display:none;
+
+}
+
+.sidebar ul li{
+
+text-align:center;
+
+font-size:20px;
+
+}
+
+.sidebar ul li i{
+
+margin:0;
+
+}
+
+.sidebar ul li{
+
+padding:18px 0;
+
+}
+
+.main{
+
+margin-left:80px;
+
+width:calc(100% - 80px);
+
+padding:20px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.topbar{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:15px;
+
+}
+
+.profile{
+
+align-self:flex-end;
+
+}
+
+.chart-box canvas{
+
+height:250px !important;
+
+}
+
+.recent-activity{
+
+overflow-x:auto;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.welcome h2{
+
+font-size:24px;
+
+}
+
+.topbar h1{
+
+font-size:28px;
+
+}
+
+.chat-btn,
+.ai-box button{
+
+width:100%;
+
+}
+
+}
+
+/* Selection */
+
+::selection{
+
+background:#6ee7ff;
+
+color:#111827;
+
+}
+/* ==========================
+   Quick Actions
+========================== */
+
+.quick-actions{
+    margin-top:35px;
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:25px;
+}
+
+.quick-actions h2{
+    margin-bottom:20px;
+    color:#fff;
+}
+
+.action-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.action-grid button{
+    background:linear-gradient(135deg,#2563eb,#38bdf8);
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:15px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+
+.action-grid button:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+.action-grid i{
+    font-size:18px;
+}

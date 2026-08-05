@@ -1,0 +1,214 @@
+/* ==========================
+   Report Page CSS Part 3
+========================== */
+
+/* Business Health Score */
+
+.health-score{
+    margin-top:35px;
+    background:rgba(255,255,255,.08);
+    padding:30px;
+    border-radius:18px;
+}
+
+.health-score h2{
+    color:#38bdf8;
+    margin-bottom:25px;
+}
+
+.score-box{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.score-circle{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#38bdf8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 0 25px rgba(56,189,248,.4);
+}
+
+.score-circle h1{
+    font-size:42px;
+    color:#fff;
+}
+
+.score-details{
+    flex:1;
+}
+
+.score-details p{
+    margin:12px 0;
+    color:#d1d5db;
+    font-size:17px;
+}
+
+/* ==========================
+      AI Conclusion
+========================== */
+
+.ai-conclusion{
+    margin-top:35px;
+    background:rgba(255,255,255,.08);
+    padding:30px;
+    border-radius:18px;
+}
+
+.ai-conclusion h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.ai-conclusion p{
+    line-height:1.9;
+    color:#d1d5db;
+    text-align:justify;
+}
+
+/* ==========================
+      Forecast
+========================== */
+
+.forecast{
+    margin-top:35px;
+}
+
+.forecast h2{
+    color:#38bdf8;
+    margin-bottom:25px;
+}
+
+.forecast-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.forecast-card{
+    background:rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    transition:.3s;
+}
+
+.forecast-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.35);
+}
+
+.forecast-card i{
+    font-size:45px;
+    color:#38bdf8;
+    margin-bottom:18px;
+}
+
+.forecast-card h3{
+    margin-bottom:12px;
+}
+
+.forecast-card h1{
+    font-size:38px;
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.forecast-card p{
+    color:#d1d5db;
+}
+
+/* ==========================
+      Footer
+========================== */
+
+.report-footer{
+    margin-top:45px;
+    padding:20px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+.report-footer p{
+    color:#94a3b8;
+}
+
+/* ==========================
+      Hover Effects
+========================== */
+
+.health-score,
+.ai-conclusion,
+.forecast-card{
+    transition:.3s;
+}
+
+.health-score:hover,
+.ai-conclusion:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+}
+
+/* ==========================
+      Responsive
+========================== */
+
+@media(max-width:992px){
+
+.score-box{
+    flex-direction:column;
+    text-align:center;
+}
+
+.forecast-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.report-cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.report-charts{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:576px){
+
+.report-cards{
+    grid-template-columns:1fr;
+}
+
+.main{
+    padding:20px;
+}
+
+.topbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.topbar h1{
+    font-size:26px;
+}
+
+.score-circle{
+    width:140px;
+    height:140px;
+}
+
+.score-circle h1{
+    font-size:32px;
+}
+
+}

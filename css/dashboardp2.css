@@ -1,0 +1,290 @@
+/* ==========================
+   Dashboard CSS - Part 2
+========================== */
+
+/* Bottom Section */
+
+.chart-box,
+.ai-box{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    transition:.3s;
+
+}
+
+.chart-box:hover,
+.ai-box:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.3);
+
+}
+
+.chart-box h2,
+.ai-box h2{
+
+    margin-bottom:20px;
+
+}
+
+.chart-box{
+
+    min-height:420px;
+
+}
+
+.chart-box canvas{
+
+    width:100% !important;
+
+    height:300px !important;
+
+}
+
+.ai-box ul{
+
+    list-style:none;
+
+}
+
+.ai-box ul li{
+
+    padding:12px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    color:#d4d4d4;
+
+}
+
+.ai-box button{
+
+    margin-top:25px;
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.ai-box button:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ==========================
+      Extra Section
+========================== */
+
+.extra-section{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+/* Recent Activity */
+
+.recent-activity{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:25px;
+
+}
+
+.recent-activity h2{
+
+    margin-bottom:20px;
+
+}
+
+.recent-activity table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.recent-activity th{
+
+    text-align:left;
+
+    padding:15px;
+
+    color:#6ee7ff;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+.recent-activity td{
+
+    padding:15px;
+
+    color:#d4d4d4;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.recent-activity tr:hover{
+
+    background:rgba(255,255,255,.05);
+
+}
+
+/* ==========================
+     Top Products
+========================== */
+
+.top-products{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:25px;
+
+}
+
+.top-products h2{
+
+    margin-bottom:25px;
+
+}
+
+.product{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:18px;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:10px;
+
+    background:#1e293b;
+
+    border-radius:20px;
+
+    margin:10px 0 20px;
+
+    overflow:hidden;
+
+}
+
+.fill{
+
+    height:100%;
+
+    background:linear-gradient(90deg,#2563eb,#6ee7ff);
+
+    border-radius:20px;
+
+}
+
+/* ==========================
+      AI Chat
+========================== */
+
+.chat-preview{
+
+    margin-top:35px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:25px;
+
+}
+
+.chat-preview h2{
+
+    margin-bottom:20px;
+
+}
+
+.chat-box{
+
+    background:#111827;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    line-height:1.8;
+
+}
+
+.chat-box p{
+
+    margin-bottom:15px;
+
+}
+
+.chat-btn{
+
+    margin-top:20px;
+
+    padding:14px 28px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#6ee7ff;
+
+    color:#111827;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.chat-btn:hover{
+
+    transform:scale(1.05);
+
+}

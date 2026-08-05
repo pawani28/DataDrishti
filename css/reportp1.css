@@ -1,0 +1,143 @@
+/* ==========================
+   Report Page Part 1
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#fff;
+}
+
+.report-container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:250px;
+    background:#111827;
+    padding:30px 20px;
+}
+
+.sidebar h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#38bdf8;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:18px 0;
+}
+
+.sidebar ul li a{
+    text-decoration:none;
+    color:#fff;
+    display:block;
+    padding:14px 18px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a{
+    background:#2563eb;
+}
+
+/* Main */
+
+.main{
+    flex:1;
+    padding:35px;
+}
+
+/* Topbar */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.topbar h1{
+    font-size:32px;
+}
+
+.download-btn{
+    padding:12px 24px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:#111827;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#0ea5e9;
+    transform:translateY(-3px);
+}
+
+/* Executive Summary */
+
+.summary-card{
+    background:rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:18px;
+    margin-bottom:35px;
+}
+
+.summary-card h2{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+.summary-card p{
+    color:#d1d5db;
+    line-height:1.8;
+}
+
+/* KPI Cards */
+
+.report-cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 25px rgba(0,0,0,.3);
+}
+
+.card h3{
+    color:#cbd5e1;
+    margin-bottom:15px;
+}
+
+.card h1{
+    color:#38bdf8;
+    font-size:34px;
+}

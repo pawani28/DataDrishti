@@ -1,0 +1,275 @@
+/* ==========================
+   Dashboard CSS - Part 1
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#fff;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ==========================
+        Sidebar
+========================== */
+
+.sidebar{
+
+    width:260px;
+
+    background:#111827;
+
+    padding:30px 20px;
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    height:100vh;
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+}
+
+.sidebar h2{
+
+    color:#6ee7ff;
+
+    margin-bottom:45px;
+
+    text-align:center;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar ul li{
+
+    padding:16px 18px;
+
+    margin-bottom:12px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:16px;
+
+}
+
+.sidebar ul li i{
+
+    width:28px;
+
+}
+
+.sidebar ul li:hover{
+
+    background:#2563eb;
+
+    transform:translateX(6px);
+
+}
+
+.sidebar .active{
+
+    background:#2563eb;
+
+}
+
+/* ==========================
+         Main
+========================== */
+
+.main{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:30px;
+
+}
+
+/* ==========================
+        Top Bar
+========================== */
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.topbar h1{
+
+    font-size:34px;
+
+}
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.profile i{
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+.profile img{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    border:2px solid #6ee7ff;
+
+}
+
+/* ==========================
+      Welcome Section
+========================== */
+
+.welcome{
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+.welcome h2{
+
+    margin-bottom:10px;
+
+}
+
+.welcome p{
+
+    color:#d4d4d4;
+
+    line-height:1.7;
+
+}
+
+/* ==========================
+        KPI Cards
+========================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    transition:.3s;
+
+    backdrop-filter:blur(15px);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.3);
+
+}
+
+.card h3{
+
+    color:#cfcfcf;
+
+    font-size:17px;
+
+    margin-bottom:15px;
+
+}
+
+.card h1{
+
+    color:#6ee7ff;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    color:#8ef58e;
+
+    font-weight:500;
+
+}
+
+/* ==========================
+      Bottom Layout
+========================== */
+
+.bottom{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+}
