@@ -1,0 +1,262 @@
+/* ==========================
+        FEATURES SECTION
+========================== */
+
+.features{
+
+    padding:100px 8%;
+
+    text-align:center;
+
+}
+
+.features h2{
+
+    font-size:42px;
+
+    margin-bottom:60px;
+
+    color:#fff;
+
+}
+
+.feature-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.feature-box{
+
+    background:rgba(255,255,255,.07);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:20px;
+
+    padding:35px 25px;
+
+    transition:.4s;
+
+    cursor:pointer;
+
+}
+
+.feature-box:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+
+    border:1px solid #6ee7ff;
+
+}
+
+.feature-box i{
+
+    font-size:45px;
+
+    color:#6ee7ff;
+
+    margin-bottom:20px;
+
+}
+
+.feature-box h3{
+
+    margin-bottom:15px;
+
+    font-size:22px;
+
+}
+
+.feature-box p{
+
+    color:#d4d4d4;
+
+    line-height:1.7;
+
+}
+
+/* ==========================
+          FOOTER
+========================== */
+
+footer{
+
+    margin-top:80px;
+
+    padding:40px 8%;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.05);
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer h2{
+
+    color:#6ee7ff;
+
+    margin-bottom:10px;
+
+}
+
+footer p{
+
+    color:#cfcfcf;
+
+    margin:8px 0;
+
+}
+
+/* ==========================
+      SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0f172a;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#5b5fff;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#6ee7ff;
+
+}
+
+/* ==========================
+      RESPONSIVE DESIGN
+========================== */
+
+@media(max-width:992px){
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.hero-left h1{
+
+    font-size:45px;
+
+}
+
+.hero-left p{
+
+    margin:auto;
+    margin-bottom:30px;
+
+}
+
+.buttons{
+
+    justify-content:center;
+
+}
+
+.glass-card{
+
+    width:100%;
+    max-width:420px;
+
+}
+
+nav{
+
+    flex-direction:column;
+
+    height:auto;
+
+    padding:20px;
+
+}
+
+nav ul{
+
+    margin:20px 0;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+    padding:60px 6%;
+
+}
+
+.hero-left h1{
+
+    font-size:36px;
+
+}
+
+.features h2{
+
+    font-size:32px;
+
+}
+
+.feature-box{
+
+    padding:30px 20px;
+
+}
+
+.buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    width:220px;
+
+    text-align:center;
+
+}
+
+.logo{
+
+    font-size:24px;
+
+}
+
+}
