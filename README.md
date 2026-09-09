@@ -67,15 +67,29 @@ DataDrishti aims to solve this problem by providing a simple platform that conve
 DataDrishti/
 │
 ├── FrontEnd/
-│   ├── index.html
-│   ├── upload.html
-│   ├── dashboard.html
-│   ├── style.css
-│   └── script.js
+│   │
+│   ├── HTML/
+│   │   ├── index.html
+│   │   ├── dashboard.html
+│   │   ├── upload.html
+│   │   └── report.html
+│   │
+│   ├── CSS/
+│   │   ├── index.css
+│   │   ├── dashboard.css
+│   │   ├── upload.css
+│   │   └── report.css
+│   │
+│   └── JS/
+│       ├── index.js
+│       ├── dashboard.js
+│       ├── upload.js
+│       └── report.js
 │
-├── app.py
-├── README.md
-└── .gitignore
+├── BackEnd/
+│   └── app.py
+│
+└── README.md
 ```
 
 > The project structure may evolve as new features and modules are added.
