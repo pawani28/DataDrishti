@@ -150,6 +150,7 @@ The project aims to make data-driven decision-making easier, faster, and more ac
 ## 👩‍💻 Developer
 
 **Pawani Chandel**
+**Palak Tripathi**
 
 B.Tech – Computer Science Engineering (Data Science)
 
