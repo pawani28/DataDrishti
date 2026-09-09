@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | DataDrishti</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Login CSS -->
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="bg-blur"></div>
+
+    <!-- Navbar -->
+    <nav>
+
+        <div class="logo">
+            <i class="fa-solid fa-chart-line"></i>
+            DataDrishti
+        </div>
+
+        <a href="index.html" class="back-home">
+    <i class="fa-solid fa-arrow-left"></i>
+    Back to Home
+</a>
+
+    </nav>
+
+
+    <!-- Login Section -->
+    <section class="login-section">
+
+        <!-- Left Side -->
+        <div class="login-intro">
+
+            <div class="intro-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <h1>
+                Welcome to
+                <span>DataDrishti</span>
+            </h1>
+
+            <p>
+                Your AI-powered data analyst is ready to transform
+                your datasets into meaningful insights.
+            </p>
+
+            <div class="intro-features">
+
+                <div>
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Smart Data Analysis</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-robot"></i>
+                    <span>AI-Powered Insights</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-file-chart-column"></i>
+                    <span>Automated Reports</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Login Card -->
+        <div class="login-card">
+
+            <div class="card-heading">
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <h2>Welcome Back!</h2>
+
+                <p>
+                    Login to continue to your dashboard
+                </p>
+            </div>
+
+
+            <form id="loginForm">
+
+                <!-- Email -->
+                <div class="input-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <i class="fa-solid fa-eye password-toggle"
+                            id="togglePassword"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Options -->
+                <div class="login-options">
+
+                    <label class="remember">
+
+                        <input type="checkbox" id="rememberMe">
+
+                        <span>Remember me</span>
+
+                    </label>
+
+                    <a href="#">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+                <!-- Login Button -->
+                <button type="submit" class="login-button">
+
+                    <span>Login</span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <!-- Message -->
+                <p id="loginMessage"></p>
+
+            </form>
+
+
+            <!-- Divider -->
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+
+            <!-- Signup -->
+            <p class="signup-text">
+
+                Don't have an account?
+
+                <a href="#">
+                    Create Account
+                </a>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 DataDrishti • AI Powered Data Analytics Platform
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>
