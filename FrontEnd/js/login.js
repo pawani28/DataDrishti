@@ -29,67 +29,28 @@ togglePassword.addEventListener("click", function () {
 
 
 // Login Form
+// NOTE: the Flask backend has no authentication route yet, so this is a front-end
+// only sign-in (it just remembers the email and opens the dashboard).
+// When a real /api/login endpoint exists, call it here instead.
 
-loginForm.addEventListener("submit", async function (event) {
+loginForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
     const email = document.getElementById("email").value.trim();
     const password = passwordInput.value;
 
-    loginMessage.textContent = "Logging in...";
-
-
-    try {
-
-        const response = await fetch("http://127.0.0.1:5000/login", {
-
-            method: "POST",
-
-            headers: {
-                "Content-Type": "application/json"
-            },
-
-            body: JSON.stringify({
-                email: email,
-                password: password
-            })
-
-        });
-
-
-        const data = await response.json();
-
-
-        if (response.ok) {
-
-            loginMessage.textContent = "Login successful!";
-
-            localStorage.setItem("userEmail", email);
-
-
-            setTimeout(() => {
-
-                window.location.href = "dashboard.html";
-
-            }, 700);
-
-
-        } else {
-
-            loginMessage.textContent =
-                data.message || "Invalid email or password.";
-
-        }
-
-
-    } catch (error) {
-
-        console.error("Login Error:", error);
-
-        loginMessage.textContent =
-            "Unable to connect to server.";
-
+    if (!email || !password) {
+        loginMessage.textContent = "Please enter your email and password.";
+        return;
     }
+
+    localStorage.setItem("userEmail", email);
+
+    loginMessage.textContent = "Login successful!";
+
+    setTimeout(() => {
+        window.location.href = "dashboard.html";
+    }, 500);
 
 });

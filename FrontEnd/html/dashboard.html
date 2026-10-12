@@ -1,782 +1,174 @@
-<<<<<<<< HEAD:html/dashboard.html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | DataDrishti AI</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-<title>Dashboard | DataDrishti AI</title>
-
-<link rel="stylesheet" href="css/dashboard.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<link rel="stylesheet" href="css/dashboardp1.css">
-<link rel="stylesheet" href="css/dashboardp2.css">
-<link rel="stylesheet" href="css/dashboardp3.css">
-
+    <link rel="stylesheet" href="../css/dashboardp1.css">
+    <link rel="stylesheet" href="../css/dashboardp2.css">
+    <link rel="stylesheet" href="../css/dashboardp3.css">
+    <link rel="stylesheet" href="../css/live.css">
 </head>
 
 <body>
 
 <div class="container">
 
-<!-- Sidebar -->
-
-<div class="sidebar">
-
-<h2>📊 DataDrishti</h2>
-
-<ul>
-
-<li class="active"><i class="fa-solid fa-house"></i> Dashboard</li>
-
-<li><i class="fa-solid fa-upload"></i> Upload Dataset</li>
-
-<li><i class="fa-solid fa-chart-column"></i> Analytics</li>
-
-<li><i class="fa-solid fa-robot"></i> AI Chat</li>
-
-<li><i class="fa-solid fa-file-lines"></i> Reports</li>
-
-<li><i class="fa-solid fa-gear"></i> Settings</li>
-
-</ul>
-
-</div>
-
-<!-- Main -->
-
-<div class="main">
-
-<!-- Top Bar -->
-
-<div class="topbar">
-
-<h1>Dashboard</h1>
-
-<div class="profile">
-
-<i class="fa-solid fa-bell"></i>
-
-<img src="https://i.pravatar.cc/45" alt="">
-
-</div>
-
-</div>
-
-<!-- Welcome -->
-
-<div class="welcome">
-
-<h2>Hello 👋</h2>
-
-<p>
-Welcome back to <b>DataDrishti AI</b>.
-Upload a dataset or explore business insights.
-</p>
-
-</div>
-
-<!-- Cards -->
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Total Revenue</h3>
-
-<h1>₹12.8M</h1>
-
-<p>▲ 18% this month</p>
-
-</div>
-
-<div class="card">
-
-<h3>Customers</h3>
-
-<h1>4,280</h1>
-
-<p>▲ 12% Growth</p>
-
-</div>
-
-<div class="card">
-
-<h3>Orders</h3>
-
-<h1>2,450</h1>
-
-<p>▲ 9% Increase</p>
-
-</div>
-
-<div class="card">
-
-<h3>Profit</h3>
-
-<h1>₹3.4M</h1>
-
-<p>▲ 15% Growth</p>
-
-</div>
-
-</div>
-
-<!-- Bottom -->
-
-<div class="bottom">
-    <!-- ==========================
-        PART 2
-========================== -->
-
-<div class="extra-section">
-
-    <!-- Recent Activity -->
-
-    <div class="recent-activity">
-
-        <h2>📋 Recent Activity</h2>
-
-        <table>
-
-            <tr>
-                <th>Date</th>
-                <th>Product</th>
-                <th>Sales</th>
-            </tr>
-
-            <tr>
-                <td>14 Jul</td>
-                <td>Laptop</td>
-                <td>₹85,000</td>
-            </tr>
-
-            <tr>
-                <td>14 Jul</td>
-                <td>Headphones</td>
-                <td>₹15,000</td>
-            </tr>
-
-            <tr>
-                <td>13 Jul</td>
-                <td>Smart Watch</td>
-                <td>₹32,000</td>
-            </tr>
-
-            <tr>
-                <td>13 Jul</td>
-                <td>Keyboard</td>
-                <td>₹9,500</td>
-            </tr>
-
-        </table>
-
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>📊 DataDrishti</h2>
+        <ul>
+            <li class="active"><a href="dashboard.html"><i class="fa-solid fa-house"></i> <span class="label">Dashboard</span></a></li>
+            <li><a href="upload.html"><i class="fa-solid fa-upload"></i> <span class="label">Upload Dataset</span></a></li>
+            <li><a href="#analytics"><i class="fa-solid fa-chart-column"></i> <span class="label">Analytics</span></a></li>
+            <li><a href="#chat"><i class="fa-solid fa-robot"></i> <span class="label">AI Chat</span></a></li>
+            <li><a href="report.html"><i class="fa-solid fa-file-lines"></i> <span class="label">Reports</span></a></li>
+        </ul>
+        <div class="sidebar-foot">DataDrishti AI</div>
     </div>
 
-    <!-- Top Products -->
+    <!-- Main -->
+    <div class="main">
 
-    <div class="top-products">
-
-        <h2>🔥 Top Selling Products</h2>
-
-        <div class="product">
-            <span>Laptop</span>
-            <span>92%</span>
+        <div class="topbar">
+            <h1>Dashboard</h1>
+            <div class="profile">
+                <span class="dataset-badge" id="dsBadge" style="display:none"></span>
+                <button type="button" class="logout-btn" id="logoutBtn">Logout</button>
+                <div class="avatar" id="avatar">U</div>
+            </div>
         </div>
 
-        <div class="progress">
-            <div class="fill" style="width:92%"></div>
+        <div class="banner error" id="banner" role="alert"></div>
+
+        <!-- Empty state (no dataset yet) -->
+        <div class="empty-state" id="emptyState">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <h2>No dataset yet</h2>
+            <p>Upload a CSV or Excel file and DataDrishti will build your dashboard, insights and report automatically.</p>
+            <a class="btn-primary" href="upload.html">Upload Dataset</a>
         </div>
 
-        <div class="product">
-            <span>Headphones</span>
-            <span>80%</span>
-        </div>
+        <div id="content" class="is-loading" style="display:none">
 
-        <div class="progress">
-            <div class="fill" style="width:80%"></div>
-        </div>
+            <div class="welcome">
+                <h2>Hello 👋</h2>
+                <p id="welcomeText">Loading your data…</p>
+            </div>
 
-        <div class="product">
-            <span>Smart Watch</span>
-            <span>74%</span>
-        </div>
+            <!-- KPI cards -->
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Revenue</h3>
+                    <h1 id="cardRevenue">…</h1>
+                    <p id="cardRevenueSub" class="muted">&nbsp;</p>
+                </div>
+                <div class="card">
+                    <h3>Customers</h3>
+                    <h1 id="cardCustomers">…</h1>
+                    <p id="cardCustomersSub" class="muted">&nbsp;</p>
+                </div>
+                <div class="card">
+                    <h3>Orders</h3>
+                    <h1 id="cardOrders">…</h1>
+                    <p id="cardOrdersSub" class="muted">&nbsp;</p>
+                </div>
+                <div class="card">
+                    <h3>Profit</h3>
+                    <h1 id="cardProfit">…</h1>
+                    <p id="cardProfitSub" class="muted">&nbsp;</p>
+                </div>
+            </div>
 
-        <div class="progress">
-            <div class="fill" style="width:74%"></div>
+            <!-- Chart + insights -->
+            <div class="bottom" id="analytics">
+                <div class="chart-box">
+                    <h2 id="chartTitle">Sales Overview</h2>
+                    <canvas id="trendChart"></canvas>
+                    <div class="chart-empty" id="trendEmpty"></div>
+                </div>
+
+                <div class="ai-box">
+                    <h2>🤖 AI Insights</h2>
+                    <ul id="insightsList"></ul>
+                    <button type="button" id="genReport">Generate Report</button>
+                </div>
+            </div>
+
+            <!-- Numeric overview + top products -->
+            <div class="extra-section">
+                <div class="recent-activity">
+                    <h2>📋 Numeric Column Overview</h2>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>Column</th><th class="num">Total</th><th class="num">Average</th><th class="num">Min</th><th class="num">Max</th></tr>
+                            </thead>
+                            <tbody id="overviewBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="top-products">
+                    <h2>🔥 Top Selling Products</h2>
+                    <div id="topProducts"></div>
+                </div>
+            </div>
+
+            <!-- Chat + side cards -->
+            <div class="bottom" id="chat">
+                <div class="chat-preview ai-chat">
+                    <h2>🤖 AI Business Assistant</h2>
+                    <div class="messages" id="chatMessages">
+                        <div class="bot-msg">Hello! 👋 I'm DataDrishti AI. Ask me about totals, top products or record counts in your data.</div>
+                    </div>
+                    <div class="chat-chips" id="chatChips">
+                        <button type="button">Which product has the highest revenue?</button>
+                        <button type="button">What is the total revenue?</button>
+                        <button type="button">How many records are there?</button>
+                    </div>
+                    <form class="chat-input" id="chatForm" autocomplete="off">
+                        <input type="text" id="chatInput" placeholder="Ask AI about your data..." maxlength="300">
+                        <button type="submit" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+                <div class="side-stack">
+                    <div class="quick-actions">
+                        <h2>⚡ Quick Actions</h2>
+                        <div class="action-grid">
+                            <button type="button" data-go="upload.html"><i class="fa-solid fa-upload"></i> Upload New Dataset</button>
+                            <button type="button" data-go="report.html"><i class="fa-solid fa-file-pdf"></i> Open Report</button>
+                            <button type="button" data-go="#analytics"><i class="fa-solid fa-chart-pie"></i> View Analytics</button>
+                            <button type="button" data-go="#chat"><i class="fa-solid fa-robot"></i> Ask the AI</button>
+                        </div>
+                    </div>
+
+                    <div class="quality-card">
+                        <h2>🧹 Data Quality</h2>
+                        <div class="quality-top"><span class="muted">Completeness</span><strong id="qualityPct">—</strong></div>
+                        <div class="progress"><div class="fill" id="qualityBar" style="width:0%"></div></div>
+                        <ul class="quality-list" id="qualityList"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="dashboard-footer">
+                <p style="color:#94a3b8;text-align:center;margin-top:40px;padding:20px;border-top:1px solid rgba(255,255,255,.1)">
+                    © 2026 DataDrishti AI | AI Powered Data Analytics Platform
+                </p>
+            </footer>
         </div>
 
     </div>
-
 </div>
 
-<!-- AI Chat Preview -->
-
-<div class="chat-preview">
-    <!-- ==========================
-        PART 3
-========================== -->
-
-<!-- Quick Actions -->
-
-<div class="quick-actions">
-
-    <h2>⚡ Quick Actions</h2>
-
-    <div class="action-grid">
-
-        <button>
-            <i class="fa-solid fa-upload"></i>
-            Upload New Dataset
-        </button>
-
-        <button>
-            <i class="fa-solid fa-file-pdf"></i>
-            Download Report
-        </button>
-
-        <button>
-            <i class="fa-solid fa-chart-pie"></i>
-            View Analytics
-        </button>
-
-        <button>
-            <i class="fa-solid fa-gear"></i>
-            Settings
-        </button>
-
-    </div>
-
-</div>
-
-<!-- AI Chat -->
-
-<div class="ai-chat">
-
-    <h2>🤖 AI Business Assistant</h2>
-
-    <div class="messages">
-
-        <div class="bot-msg">
-            Hello! 👋 I'm DataDrishti AI.
-            Ask me anything about your business data.
-        </div>
-
-        <div class="user-msg">
-            Which product generated the highest revenue?
-        </div>
-
-        <div class="bot-msg">
-            📊 Laptop generated the highest revenue
-            with ₹8.5 Lakhs this month.
-        </div>
-
-    </div>
-
-    <div class="chat-input">
-
-        <input
-        type="text"
-        placeholder="Ask AI about your data...">
-
-        <button>
-
-            <i class="fa-solid fa-paper-plane"></i>
-
-        </button>
-
-    </div>
-
-</div>
-
-<!-- Footer -->
-
-<footer class="dashboard-footer">
-
-    <p>
-
-        © 2026 DataDrishti AI |
-        AI Powered Data Analytics Platform
-
-    </p>
-
-</footer>
-
-    <h2>🤖 AI Assistant</h2>
-
-    <div class="chat-box">
-
-        <p><b>You:</b> Which product generated the highest revenue?</p>
-
-        <p><b>AI:</b> Laptop generated the highest revenue with ₹8.5 Lakhs this month.</p>
-
-    </div>
-
-    <button class="chat-btn">
-
-        Open AI Chat
-
-    </button>
-
-</div>
-
-<!-- Chart -->
-
-<div class="chart-box">
-
-<h2>Sales Overview</h2>
-
-<canvas id="salesChart"></canvas>
-
-</div>
-
-<!-- AI -->
-
-<div class="ai-box">
-
-<h2>🤖 AI Insights</h2>
-
-<ul>
-
-<li>✔ Revenue increased by 18%</li>
-
-<li>✔ Delhi generated highest sales</li>
-
-<li>✔ Electronics category performed best</li>
-
-<li>✔ Inventory low for Product A</li>
-
-<li>✔ AI recommends increasing stock</li>
-
-</ul>
-
-<button>
-
-Generate Report
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script src="js/dashboard.js"></script>
-
-</body>
-
-========
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Dashboard | DataDrishti AI</title>
-
-<link rel="stylesheet" href="css/dashboard.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<link rel="stylesheet" href="../css/dashboard.css">
-
-<link rel="stylesheet" href="../css/dashboardp1.css">
-<link rel="stylesheet" href="../css/dashboardp2.css">
-<link rel="stylesheet" href="../css/dashboardp3.css">
-</head>
-
-<body>
-
-<div class="container">
-
-<!-- Sidebar -->
-
-<div class="sidebar">
-
-<h2>📊 DataDrishti</h2>
-
-<ul>
-
-<li class="active">
-    <a href="dashboard.html">
-        <i class="fa-solid fa-house"></i>
-        Dashboard
-    </a>
-</li>
-
-<li>
-    <a href="upload.html">
-        <i class="fa-solid fa-upload"></i>
-        Upload Dataset
-    </a>
-</li>
-
-<li>
-    <a href="dashboard.html">
-        <i class="fa-solid fa-chart-column"></i>
-        Analytics
-    </a>
-</li>
-
-<li>
-    <a href="dashboard.html">
-        <i class="fa-solid fa-robot"></i>
-        AI Chat
-    </a>
-</li>
-
-<li>
-    <a href="report.html">
-        <i class="fa-solid fa-file-lines"></i>
-        Reports
-    </a>
-</li>
-
-</ul>
-
-</div>
-
-<!-- Main -->
-
-<div class="main">
-
-<!-- Top Bar -->
-
-<div class="topbar">
-
-<h1>Dashboard</h1>
-
-<div class="profile">
-
-<i class="fa-solid fa-bell"></i>
-
-<img src="https://i.pravatar.cc/45" alt="">
-
-</div>
-
-</div>
-
-<!-- Welcome -->
-
-<div class="welcome">
-
-<h2>Hello 👋</h2>
-
-<p>
-Welcome back to <b>DataDrishti AI</b>.
-Upload a dataset or explore business insights.
-</p>
-
-</div>
-
-<!-- Cards -->
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Total Revenue</h3>
-
-<h1>₹12.8M</h1>
-
-<p>▲ 18% this month</p>
-
-</div>
-
-<div class="card">
-
-<h3>Customers</h3>
-
-<h1>4,280</h1>
-
-<p>▲ 12% Growth</p>
-
-</div>
-
-<div class="card">
-
-<h3>Orders</h3>
-
-<h1>2,450</h1>
-
-<p>▲ 9% Increase</p>
-
-</div>
-
-<div class="card">
-
-<h3>Profit</h3>
-
-<h1>₹3.4M</h1>
-
-<p>▲ 15% Growth</p>
-
-</div>
-
-</div>
-
-<!-- Bottom -->
-
-<div class="bottom">
-    <!-- ==========================
-        PART 2
-========================== -->
-
-<div class="extra-section">
-
-    <!-- Recent Activity -->
-
-    <div class="recent-activity">
-
-        <h2>📋 Recent Activity</h2>
-
-        <table>
-
-            <tr>
-                <th>Date</th>
-                <th>Product</th>
-                <th>Sales</th>
-            </tr>
-
-            <tr>
-                <td>14 Jul</td>
-                <td>Laptop</td>
-                <td>₹85,000</td>
-            </tr>
-
-            <tr>
-                <td>14 Jul</td>
-                <td>Headphones</td>
-                <td>₹15,000</td>
-            </tr>
-
-            <tr>
-                <td>13 Jul</td>
-                <td>Smart Watch</td>
-                <td>₹32,000</td>
-            </tr>
-
-            <tr>
-                <td>13 Jul</td>
-                <td>Keyboard</td>
-                <td>₹9,500</td>
-            </tr>
-
-        </table>
-
-    </div>
-
-    <!-- Top Products -->
-
-    <div class="top-products">
-
-        <h2>🔥 Top Selling Products</h2>
-
-        <div class="product">
-            <span>Laptop</span>
-            <span>92%</span>
-        </div>
-
-        <div class="progress">
-            <div class="fill" style="width:92%"></div>
-        </div>
-
-        <div class="product">
-            <span>Headphones</span>
-            <span>80%</span>
-        </div>
-
-        <div class="progress">
-            <div class="fill" style="width:80%"></div>
-        </div>
-
-        <div class="product">
-            <span>Smart Watch</span>
-            <span>74%</span>
-        </div>
-
-        <div class="progress">
-            <div class="fill" style="width:74%"></div>
-        </div>
-
-    </div>
-
-</div>
-
-<!-- AI Chat Preview -->
-
-<div class="chat-preview">
-    <!-- ==========================
-        PART 3
-========================== -->
-
-<!-- Quick Actions -->
-
-<div class="quick-actions">
-
-    <h2>⚡ Quick Actions</h2>
-
-    <div class="action-grid">
-
-        <button>
-            <i class="fa-solid fa-upload"></i>
-            Upload New Dataset
-        </button>
-
-        <button>
-            <i class="fa-solid fa-file-pdf"></i>
-            Download Report
-        </button>
-
-        <button>
-            <i class="fa-solid fa-chart-pie"></i>
-            View Analytics
-        </button>
-
-        <button>
-            <i class="fa-solid fa-gear"></i>
-            Settings
-        </button>
-
-    </div>
-
-</div>
-
-<!-- AI Chat -->
-
-<div class="ai-chat">
-
-    <h2>🤖 AI Business Assistant</h2>
-
-    <div class="messages">
-
-        <div class="bot-msg">
-            Hello! 👋 I'm DataDrishti AI.
-            Ask me anything about your business data.
-        </div>
-
-        <div class="user-msg">
-            Which product generated the highest revenue?
-        </div>
-
-        <div class="bot-msg">
-            📊 Laptop generated the highest revenue
-            with ₹8.5 Lakhs this month.
-        </div>
-
-    </div>
-
-    <div class="chat-input">
-
-        <input
-        type="text"
-        placeholder="Ask AI about your data...">
-
-        <button>
-
-            <i class="fa-solid fa-paper-plane"></i>
-
-        </button>
-
-    </div>
-
-</div>
-
-<!-- Footer -->
-
-<footer class="dashboard-footer">
-
-    <p>
-
-        © 2026 DataDrishti AI |
-        AI Powered Data Analytics Platform
-
-    </p>
-
-</footer>
-
-    <h2>🤖 AI Assistant</h2>
-
-    <div class="chat-box">
-
-        <p><b>You:</b> Which product generated the highest revenue?</p>
-
-        <p><b>AI:</b> Laptop generated the highest revenue with ₹8.5 Lakhs this month.</p>
-
-    </div>
-
-    <button class="chat-btn">
-
-        Open AI Chat
-
-    </button>
-
-</div>
-
-<!-- Chart -->
-
-<div class="chart-box">
-
-<h2>Sales Overview</h2>
-
-<canvas id="salesChart"></canvas>
-
-</div>
-
-<!-- AI -->
-
-<div class="ai-box">
-
-<h2>🤖 AI Insights</h2>
-
-<ul>
-
-<li>✔ Revenue increased by 18%</li>
-
-<li>✔ Delhi generated highest sales</li>
-
-<li>✔ Electronics category performed best</li>
-
-<li>✔ Inventory low for Product A</li>
-
-<li>✔ AI recommends increasing stock</li>
-
-</ul>
-
-<button>
-
-Generate Report
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="../js/api.js"></script>
 <script src="../js/dashboard.js"></script>
-
 </body>
-
->>>>>>>> 4ec75fd (Reorganized frontend structure):FrontEnd/html/dashboard.html
 </html>

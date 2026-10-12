@@ -1,471 +1,145 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Upload Dataset | DataDrishti AI</title>
-<link rel="stylesheet" href="../css/styleP1.css">
-<link rel="stylesheet" href="../css/styleP2.css">
-<link rel="stylesheet" href="../css/styleP3.css">
-<link rel="stylesheet" href="../css/uploadpg.css">
-    
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="css/uploadpg.css">
-
+    <link rel="stylesheet" href="../css/styleP1.css">
+    <link rel="stylesheet" href="../css/styleP2.css">
+    <link rel="stylesheet" href="../css/styleP3.css">
+    <link rel="stylesheet" href="../css/uploadpg.css">
+    <link rel="stylesheet" href="../css/live.css">
 </head>
 
 <body>
 
 <nav>
-
     <div class="logo">
         <i class="fa-solid fa-chart-line"></i>
         DataDrishti AI
     </div>
-
     <ul>
-
         <li><a href="index.html">Home</a></li>
-
-        <li><a href="#">Dashboard</a></li>
-
-        <li><a href="#">Reports</a></li>
-
-    </ul>
-
-</nav>
-
-<section class="upload-page">
-
-    <h1>Upload Your Dataset</h1>
-
-    <p>
-        Upload your CSV or Excel file and let AI analyze your business data.
-    </p>
-
-    <div class="upload-box">
-
-        <i class="fa-solid fa-cloud-arrow-up"></i>
-
-        <h2>Drag & Drop File Here</h2>
-
-        <p>or</p>
-
-        <input type="file" id="fileInput" hidden>
-
-        <button onclick="document.getElementById('fileInput').click()">
-
-            Browse Dataset
-
-        </button>
-
-        <span id="fileName">No file selected</span>
-
-    </div>
-
-    <button class="analyze-btn" onclick="startAnalysis()">
-
-        Analyze Dataset
-
-    </button>
-
-</section>
-<div class="analysis-info">
-
-    <h2>🤖 AI Analysis Includes</h2>
-
-    <div class="analysis-grid">
-
-        <div class="analysis-card">
-            <i class="fa-solid fa-chart-line"></i>
-            <h3>Sales Trends</h3>
-        </div>
-
-        <div class="analysis-card">
-            <i class="fa-solid fa-users"></i>
-            <h3>Customer Insights</h3>
-        </div>
-
-        <div class="analysis-card">
-            <i class="fa-solid fa-box"></i>
-            <h3>Inventory Analysis</h3>
-        </div>
-
-        <div class="analysis-card">
-            <i class="fa-solid fa-indian-rupee-sign"></i>
-            <h3>Revenue Report</h3>
-        </div>
-
-    </div>
-
-</div>
-
-<div class="loader" id="loader">
-
-    <div class="spinner"></div>
-
-    <h2>Analyzing Dataset...</h2>
-
-    <p>Please wait while AI is generating insights.</p>
-
-</div>
-
-<script>
-
-const fileInput=document.getElementById("fileInput");
-
-const fileName=document.getElementById("fileName");
-
-fileInput.addEventListener("change",()=>{
-
-if(fileInput.files.length>0){
-
-fileName.innerHTML=fileInput.files[0].name;
-
-}
-
-});
-
-function startAnalysis(){
-
-if(fileInput.files.length==0){
-
-alert("Please select a dataset.");
-
-return;
-
-}
-
-document.getElementById("loader").style.display="flex";
-
-setTimeout(()=>{
-
-window.location.href="dashboard.html";
-
-},3000);
-
-}
-
-</script>
-
-</body>
-</html>
-=======
-<<<<<<<< HEAD:html/upload.html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Upload Dataset | DataDrishti AI</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="css/uploadpg.css">
-
-</head>
-
-<body>
-
-<nav>
-
-    <div class="logo">
-        <i class="fa-solid fa-chart-line"></i>
-        DataDrishti AI
-    </div>
-
-    <ul>
-
-        <li><a href="index.html">Home</a></li>
-
-        <li><a href="#">Dashboard</a></li>
-
-        <li><a href="#">Reports</a></li>
-
-    </ul>
-
-</nav>
-
-<section class="upload-page">
-
-    <h1>Upload Your Dataset</h1>
-
-    <p>
-        Upload your CSV or Excel file and let AI analyze your business data.
-    </p>
-
-    <div class="upload-box">
-
-        <i class="fa-solid fa-cloud-arrow-up"></i>
-
-        <h2>Drag & Drop File Here</h2>
-
-        <p>or</p>
-
-        <input type="file" id="fileInput" hidden>
-
-        <button onclick="document.getElementById('fileInput').click()">
-
-            Browse Dataset
-
-        </button>
-
-        <span id="fileName">No file selected</span>
-
-    </div>
-
-    <button class="analyze-btn" onclick="startAnalysis()">
-
-        Analyze Dataset
-
-    </button>
-
-</section>
-<div class="analysis-info">
-
-    <h2>🤖 AI Analysis Includes</h2>
-
-    <div class="analysis-grid">
-
-        <div class="analysis-card">
-            <i class="fa-solid fa-chart-line"></i>
-            <h3>Sales Trends</h3>
-        </div>
-
-        <div class="analysis-card">
-            <i class="fa-solid fa-users"></i>
-            <h3>Customer Insights</h3>
-        </div>
-
-        <div class="analysis-card">
-            <i class="fa-solid fa-box"></i>
-            <h3>Inventory Analysis</h3>
-        </div>
-
-        <div class="analysis-card">
-            <i class="fa-solid fa-indian-rupee-sign"></i>
-            <h3>Revenue Report</h3>
-        </div>
-
-    </div>
-
-</div>
-<div class="loader" id="loader">
-
-    <div class="spinner"></div>
-
-    <h2>Analyzing Dataset...</h2>
-
-    <p>Please wait while AI is generating insights.</p>
-
-</div>
-
-<script>
-
-const fileInput=document.getElementById("fileInput");
-
-const fileName=document.getElementById("fileName");
-
-fileInput.addEventListener("change",()=>{
-
-if(fileInput.files.length>0){
-
-fileName.innerHTML=fileInput.files[0].name;
-
-}
-
-});
-
-function startAnalysis(){
-
-if(fileInput.files.length==0){
-
-alert("Please select a dataset.");
-
-return;
-
-}
-
-document.getElementById("loader").style.display="flex";
-
-setTimeout(()=>{
-
-window.location.href="dashboard.html";
-
-},3000);
-
-}
-
-</script>
-
-</body>
-</html>
->>>>>>> 0d35ea78fca23371bfe3a0beab405aea1ca2468d
-========
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Upload Dataset | DataDrishti AI</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="css/uploadpg.css">
-
-</head>
-
-<body>
-
-<nav>
-
-    <div class="logo">
-        <i class="fa-solid fa-chart-line"></i>
-        DataDrishti AI
-    </div>
-
-    <ul>
-
-        <li><a href="index.html">Home</a></li>
-
         <li><a href="dashboard.html">Dashboard</a></li>
         <li><a href="report.html">Reports</a></li>
-
     </ul>
-
 </nav>
 
 <section class="upload-page">
 
     <h1>Upload Your Dataset</h1>
+    <p>Upload your CSV or Excel file and let AI analyze your business data.</p>
 
-    <p>
-        Upload your CSV or Excel file and let AI analyze your business data.
-    </p>
-
-    <div class="upload-box">
-
+    <div class="upload-box" id="dropZone">
         <i class="fa-solid fa-cloud-arrow-up"></i>
-
-        <h2>Drag & Drop File Here</h2>
-
+        <h2>Drag &amp; Drop File Here</h2>
         <p>or</p>
 
-        <input type="file" id="fileInput" hidden>
-
-        <button onclick="document.getElementById('fileInput').click()">
-
-            Browse Dataset
-
-        </button>
+        <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" hidden>
+        <button type="button" id="browseBtn">Browse Dataset</button>
 
         <span id="fileName">No file selected</span>
-
+        <div class="upload-hint">Supported: CSV, XLSX, XLS &nbsp;•&nbsp; Max 25 MB</div>
     </div>
 
-    <button class="analyze-btn" onclick="startAnalysis()">
+    <button type="button" class="analyze-btn" id="analyzeBtn">Analyze Dataset</button>
 
-        Analyze Dataset
+    <div class="upload-error" id="uploadError" role="alert"></div>
 
-    </button>
+    <div class="upload-hint">
+        No file handy? <a href="../sample/sample_sales.csv" download>Download a sample sales CSV</a> and try it.
+        <br>Tip: include columns named like <b>date</b>, <b>product</b>, <b>revenue</b> (or sales / amount), <b>profit</b>, <b>customer_id</b> and <b>order_id</b> to unlock every chart.
+    </div>
 
 </section>
+
 <div class="analysis-info">
-
     <h2>🤖 AI Analysis Includes</h2>
-
     <div class="analysis-grid">
-
-        <div class="analysis-card">
-            <i class="fa-solid fa-chart-line"></i>
-            <h3>Sales Trends</h3>
-        </div>
-
-        <div class="analysis-card">
-            <i class="fa-solid fa-users"></i>
-            <h3>Customer Insights</h3>
-        </div>
-
-        <div class="analysis-card">
-            <i class="fa-solid fa-box"></i>
-            <h3>Inventory Analysis</h3>
-        </div>
-
-        <div class="analysis-card">
-            <i class="fa-solid fa-indian-rupee-sign"></i>
-            <h3>Revenue Report</h3>
-        </div>
-
+        <div class="analysis-card"><i class="fa-solid fa-chart-line"></i><h3>Sales Trends</h3></div>
+        <div class="analysis-card"><i class="fa-solid fa-users"></i><h3>Customer Insights</h3></div>
+        <div class="analysis-card"><i class="fa-solid fa-box"></i><h3>Top Products</h3></div>
+        <div class="analysis-card"><i class="fa-solid fa-indian-rupee-sign"></i><h3>Revenue Report</h3></div>
     </div>
-
 </div>
+
 <div class="loader" id="loader">
-
     <div class="spinner"></div>
-
     <h2>Analyzing Dataset...</h2>
-
     <p>Please wait while AI is generating insights.</p>
-
 </div>
 
+<script src="../js/api.js"></script>
 <script>
+(function () {
+    var MAX_MB = 25;
+    var ALLOWED = [".csv", ".xlsx", ".xls"];
 
-const fileInput=document.getElementById("fileInput");
+    var dropZone = document.getElementById("dropZone");
+    var fileInput = document.getElementById("fileInput");
+    var fileName = document.getElementById("fileName");
+    var analyzeBtn = document.getElementById("analyzeBtn");
+    var errorBox = document.getElementById("uploadError");
+    var loader = document.getElementById("loader");
+    var selected = null;
 
-const fileName=document.getElementById("fileName");
+    document.getElementById("browseBtn").addEventListener("click", function () { fileInput.click(); });
+    fileInput.addEventListener("change", function () { if (fileInput.files.length) pick(fileInput.files[0]); });
 
-fileInput.addEventListener("change",()=>{
+    ["dragenter", "dragover"].forEach(function (ev) {
+        dropZone.addEventListener(ev, function (e) { e.preventDefault(); dropZone.classList.add("dragover"); });
+    });
+    ["dragleave", "drop"].forEach(function (ev) {
+        dropZone.addEventListener(ev, function (e) { e.preventDefault(); dropZone.classList.remove("dragover"); });
+    });
+    dropZone.addEventListener("drop", function (e) {
+        if (e.dataTransfer.files.length) pick(e.dataTransfer.files[0]);
+    });
 
-if(fileInput.files.length>0){
+    function size(bytes) {
+        return bytes > 1048576 ? (bytes / 1048576).toFixed(1) + " MB" : Math.max(1, Math.round(bytes / 1024)) + " KB";
+    }
 
-fileName.innerHTML=fileInput.files[0].name;
+    function pick(file) {
+        errorBox.textContent = "";
+        var ext = file.name.slice(file.name.lastIndexOf(".")).toLowerCase();
+        if (ALLOWED.indexOf(ext) === -1) {
+            selected = null;
+            fileName.textContent = "No file selected";
+            errorBox.textContent = "Only CSV, XLSX and XLS files are supported.";
+            return;
+        }
+        if (file.size > MAX_MB * 1024 * 1024) {
+            selected = null;
+            fileName.textContent = "No file selected";
+            errorBox.textContent = "File is too large (" + size(file.size) + "). Maximum size is " + MAX_MB + " MB.";
+            return;
+        }
+        selected = file;
+        fileName.textContent = file.name + "  (" + size(file.size) + ")";
+    }
 
-}
+    analyzeBtn.addEventListener("click", async function () {
+        errorBox.textContent = "";
+        if (!selected) { errorBox.textContent = "Please select a dataset first."; return; }
 
-});
-
-function startAnalysis(){
-
-if(fileInput.files.length==0){
-
-alert("Please select a dataset.");
-
-return;
-
-}
-
-document.getElementById("loader").style.display="flex";
-
-setTimeout(()=>{
-
-window.location.href="dashboard.html";
-
-},3000);
-
-}
-
+        analyzeBtn.disabled = true;
+        loader.style.display = "flex";
+        try {
+            await DD.uploadDataset(selected);
+            location.href = "dashboard.html";
+        } catch (err) {
+            loader.style.display = "none";
+            analyzeBtn.disabled = false;
+            errorBox.textContent = err.message;
+        }
+    });
+})();
 </script>
 
 </body>
 </html>
->>>>>>>> 4ec75fd (Reorganized frontend structure):FrontEnd/html/upload.html

@@ -1,0 +1,147 @@
+/* ==========================================================
+   DataDrishti – live-data additions
+   Works on top of dashboardp1-3.css, reportp1-3.css, uploadpg.css
+   ========================================================== */
+
+html { scroll-behavior: smooth; }
+a { color: inherit; text-decoration: none; }
+
+/* ---------- Dashboard sidebar links ---------- */
+.container .sidebar ul li { padding: 0; }
+.container .sidebar ul li a { display: block; padding: 16px 18px; border-radius: 12px; }
+.container .sidebar ul li a i { width: 28px; }
+.sidebar-foot { position: absolute; bottom: 25px; left: 20px; right: 20px; font-size: 13px; color: #94a3b8; text-align: center; }
+
+/* ---------- Top bar extras ---------- */
+.dataset-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(110,231,255,.12); color: #6ee7ff; padding: 8px 14px; border-radius: 30px; font-size: 14px; max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.avatar { width: 45px; height: 45px; border-radius: 50%; border: 2px solid #6ee7ff; display: flex; align-items: center; justify-content: center; font-weight: 600; background: #1e293b; color: #6ee7ff; text-transform: uppercase; }
+.logout-btn { background: none; border: 1px solid rgba(255,255,255,.2); color: #cbd5e1; padding: 8px 14px; border-radius: 10px; cursor: pointer; font-size: 14px; transition: .3s; }
+.logout-btn:hover { border-color: #6ee7ff; color: #6ee7ff; }
+
+/* ---------- Banner / empty / loading ---------- */
+.banner { display: none; padding: 14px 18px; border-radius: 12px; margin-bottom: 22px; line-height: 1.6; }
+.banner.show { display: block; }
+.banner.error { background: rgba(248,113,113,.12); border: 1px solid rgba(248,113,113,.4); color: #fecaca; }
+.empty-state { display: none; text-align: center; padding: 70px 20px; background: rgba(255,255,255,.06); border-radius: 20px; }
+.empty-state.show { display: block; }
+.empty-state i { font-size: 56px; color: #6ee7ff; margin-bottom: 18px; }
+.empty-state h2 { margin-bottom: 10px; }
+.empty-state p { color: #cbd5e1; max-width: 480px; margin: 0 auto; line-height: 1.7; }
+.btn-primary { display: inline-block; margin-top: 24px; padding: 14px 32px; border-radius: 30px; background: #6ee7ff; color: #111827; font-weight: 600; border: none; cursor: pointer; transition: .3s; }
+.btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(110,231,255,.4); }
+.is-loading .card h1 { opacity: .35; }
+.is-loading .card h1::after { content: ""; }
+.card p.muted, p.muted, .muted { color: #94a3b8; }
+.card p.down { color: #fca5a5; }
+
+/* ---------- Charts ---------- */
+.chart-empty { display: none; color: #94a3b8; line-height: 1.8; padding: 60px 15px; text-align: center; }
+.chart-empty.show { display: block; }
+.chart-empty i { font-size: 38px; display: block; margin-bottom: 14px; color: #475569; }
+
+/* ---------- Tables ---------- */
+.table-wrap { overflow-x: auto; }
+.recent-activity td.num, .recent-activity th.num { text-align: right; }
+.performance td.up { color: #8ef58e; }
+.performance td.dn { color: #fca5a5; }
+.performance .table-wrap { overflow-x: auto; }
+
+/* ---------- Top products rows ---------- */
+.top-products .product span:first-child { max-width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.top-products .empty-line, .top-products-report .empty-line { color: #94a3b8; line-height: 1.7; }
+
+/* ---------- Bottom grid (chat + side cards) ---------- */
+.bottom > .chat-preview, .side-stack > * { margin-top: 0; }
+.side-stack { display: grid; gap: 25px; align-content: start; }
+.quality-card { background: rgba(255,255,255,.08); border-radius: 20px; padding: 25px; }
+.quality-card h2 { margin-bottom: 15px; }
+.quality-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+.quality-top strong { font-size: 30px; color: #6ee7ff; }
+.quality-list { list-style: none; margin-top: 6px; }
+.quality-list li { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.07); color: #d4d4d4; font-size: 14px; display: flex; justify-content: space-between; gap: 10px; }
+.quality-list li:last-child { border-bottom: none; }
+.quality-list .ok { color: #8ef58e; }
+.quality-list .bad { color: #fca5a5; }
+
+/* ---------- AI chat ---------- */
+.ai-chat h2 { margin-bottom: 18px; }
+.messages { display: flex; flex-direction: column; gap: 12px; background: #111827; padding: 18px; border-radius: 15px; height: 330px; overflow-y: auto; }
+.bot-msg, .user-msg { max-width: 85%; padding: 12px 16px; border-radius: 14px; line-height: 1.6; font-size: 15px; word-wrap: break-word; }
+.bot-msg { align-self: flex-start; background: rgba(110,231,255,.12); border: 1px solid rgba(110,231,255,.18); color: #e2e8f0; }
+.user-msg { align-self: flex-end; background: #2563eb; color: #fff; }
+.bot-msg.pending { opacity: .6; font-style: italic; }
+.chat-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.chat-chips button { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); color: #cbd5e1; padding: 8px 14px; border-radius: 20px; cursor: pointer; font-size: 13px; transition: .3s; }
+.chat-chips button:hover { border-color: #6ee7ff; color: #6ee7ff; }
+.chat-input { display: flex; gap: 10px; margin-top: 14px; }
+.chat-input input { flex: 1; min-width: 0; padding: 14px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,.15); background: #111827; color: #fff; font-size: 15px; outline: none; }
+.chat-input input:focus { border-color: #6ee7ff; }
+.chat-input button { flex-shrink: 0; padding: 0 22px; border: none; border-radius: 12px; background: #2563eb; color: #fff; cursor: pointer; font-size: 16px; transition: .3s; }
+.chat-input button:hover { background: #1d4ed8; }
+.chat-input button:disabled, .chat-input input:disabled { opacity: .6; cursor: not-allowed; }
+
+/* ---------- Upload page ---------- */
+.upload-box.dragover { border-color: #fff; background: rgba(110,231,255,.16); transform: translateY(-8px); }
+.upload-error { color: #fca5a5; margin-top: 20px; min-height: 24px; max-width: 560px; line-height: 1.6; }
+.upload-hint { color: #94a3b8; font-size: 14px; margin-top: 12px; line-height: 1.7; }
+.upload-hint a { color: #6ee7ff; text-decoration: underline; }
+.analyze-btn:disabled { opacity: .6; cursor: not-allowed; }
+.analysis-info { padding: 0 20px 60px; text-align: center; }
+.analysis-grid { max-width: 1100px; margin: 0 auto; }
+@media (max-width: 800px) { .analysis-grid { grid-template-columns: repeat(2, 1fr); } .upload-page h1 { font-size: 34px; } }
+
+/* ---------- Report page ---------- */
+.report-container .sidebar { min-height: 100vh; flex-shrink: 0; }
+.report-container .main { min-width: 0; }
+.report-cards .card h1 { font-size: 30px; word-break: break-word; }
+.report-cards .card p { color: #94a3b8; margin-top: 8px; font-size: 14px; }
+.summary-card p b { color: #fff; }
+.report-section-note { color: #94a3b8; font-size: 14px; margin-top: 14px; line-height: 1.6; }
+.insights-card { margin-top: 35px; background: rgba(255,255,255,.08); padding: 28px; border-radius: 18px; }
+.insights-card h2 { color: #38bdf8; margin-bottom: 18px; }
+.insights-card ul { list-style: none; }
+.insights-card li { padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.07); color: #d1d5db; line-height: 1.7; }
+.insights-card li:last-child { border-bottom: none; }
+.top-products-report .progress { margin-bottom: 20px; }
+.score-details .ok { color: #8ef58e; }
+.score-details .bad { color: #fca5a5; }
+.forecast-card h1 { font-size: 30px; }
+
+/* ---------- Print (Download PDF) ---------- */
+@media print {
+  body { background: #fff !important; color: #111 !important; animation: none !important; }
+  .sidebar, .download-btn, .logout-btn, .sidebar-foot { display: none !important; }
+  .main { padding: 0 !important; margin: 0 !important; width: 100% !important; }
+  .report-container { display: block; }
+  .summary-card, .card, .chart-card, .performance, .top-products-report, .health-score, .ai-conclusion, .forecast-card, .insights-card {
+    background: #fff !important; border: 1px solid #cbd5e1; box-shadow: none !important; transform: none !important; break-inside: avoid; color: #111 !important;
+  }
+  h1, h2, h3, p, td, th, li, span { color: #111 !important; }
+  .performance th { background: #e2e8f0 !important; }
+  .score-circle { background: #38bdf8 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .fill { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* ---------- Responsive fixes ---------- */
+.main, .bottom > *, .extra-section > *, .cards > *, .report-cards > *, .report-charts > * { min-width: 0; }
+.upload-box { width: 100%; max-width: 500px; padding: 40px 24px; }
+.summary-card p { overflow-wrap: anywhere; }
+
+@media (max-width: 768px) {
+  .report-container { flex-direction: column; }
+  .report-container .sidebar { width: 100%; min-height: auto; padding: 16px 14px; }
+  .report-container .sidebar h2 { margin-bottom: 14px; }
+  .report-container .sidebar ul { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .report-container .sidebar ul li { margin: 0; }
+  .report-container .sidebar ul li a { padding: 10px 14px; }
+  .report-container .main { padding: 18px; }
+  .topbar .profile { flex-wrap: wrap; justify-content: flex-end; }
+  .dataset-badge { max-width: 180px; }
+}
+
+@media (max-width: 768px) {
+  .container .sidebar ul li a { text-align: center; padding: 18px 0; }
+  .container .sidebar ul li a i { width: auto; margin: 0; }
+  .container .sidebar ul li a .label { display: none; }
+  .sidebar-foot { display: none; }
+}
